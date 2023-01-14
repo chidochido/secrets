@@ -9,4 +9,6 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+app.use('/api/messages', require('./routes/messageRoutes'))
+
 app.listen(port, () => console.log(`server started on port ${port}`))
